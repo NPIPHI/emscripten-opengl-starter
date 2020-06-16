@@ -23,7 +23,7 @@ To build for native run
 mkdir build-native
 cd build-native
 cmake ..
-make
+make main
 main.exe
 ```
  
