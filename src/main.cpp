@@ -32,7 +32,7 @@ int main( void ){
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders( "res/vertex.glsl", "res/fragment.glsl" );
 
-
+    //fill vertex buffer with triangle
     static const GLfloat g_vertex_buffer_data[] = {
             -1.0f, -1.0f, 0.0f,
             1.0f, -1.0f, 0.0f,
@@ -75,7 +75,7 @@ void glInit(){
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // Open a window and create its OpenGL context
-    window = glfwCreateWindow( 1024, 768, "Tutorial 02 - Red triangle", NULL, NULL);
+    window = glfwCreateWindow( 1024, 768, "Opengl Triangle", NULL, NULL);
     if( window == NULL ){
         fprintf( stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n" );
         getchar();
@@ -100,6 +100,7 @@ void glInit(){
 }
 
 void mainLoop(){
+    //make the tip of the triangle follow the cursor
     double x, y;
     int width, height;
     glfwGetCursorPos(window, &x, &y);
@@ -110,6 +111,7 @@ void mainLoop(){
             screenX, screenY, 0
     };
     glBufferSubData(GL_ARRAY_BUFFER, 24, 12, point);
+
     // Clear the screen
     glClear( GL_COLOR_BUFFER_BIT );
 
@@ -120,10 +122,10 @@ void mainLoop(){
     glEnableVertexAttribArray(vertexPosition);
     glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
     glVertexAttribPointer(
-            vertexPosition,                  // attribute 0. No particular reason for 0, but must match the layout in the shader.
+            vertexPosition,                  // location of our vertex attribute
             3,                  // size
             GL_FLOAT,           // type
-            GL_FALSE,           // normalized?
+            GL_FALSE,           // normalized, does not matter when input type is float
             0,                  // stride
             (void*)0            // array buffer offset
     );
