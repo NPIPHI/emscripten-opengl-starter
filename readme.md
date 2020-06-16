@@ -1,4 +1,6 @@
-#Minimal openGL emscripten example
+<h2>
+Minimal openGL emscripten example
+</h2>
 Based on the excellent tutorial at http://www.opengl-tutorial.org/
 <br>
 <br>
