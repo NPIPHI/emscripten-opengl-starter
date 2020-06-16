@@ -15,6 +15,7 @@ This is to make the emscripten file system work the same as the native one. (The
 <br>
 <br>
 To build for native run
+
 ```commandline
 mkdir build-native
 cd build-native
@@ -24,6 +25,7 @@ main.exe
 ```
  
 To build for emscripten run
+
 ```commandline
 mkdir build-wasm
 cd build-wasm
@@ -32,6 +34,7 @@ emmake make
 ```
 and then open main.html in your favorite browser. 
 You will have to open main.html on a local server if you see an error message about cross origin requests. You can easily install one with 
+
 ```commandline
 npm install http-server -g
 http-server
