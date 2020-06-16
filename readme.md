@@ -1,7 +1,10 @@
 <h2>
 Minimal openGL emscripten example
 </h2>
-Based on the excellent tutorial at http://www.opengl-tutorial.org/
+Based on the excellent tutorial at 
+<a href="http://www.opengl-tutorial.org/">http://www.opengl-tutorial.org/</a>
+<br>
+Get emscripten at <a href="https://emscripten.org/">https://emscripten.org/</a>
 <br>
 <br>
 This is a minimal openGL program that compiles for both native and the web. It is based on GLEW and GLFW3.
