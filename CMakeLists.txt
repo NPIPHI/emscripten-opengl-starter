@@ -6,7 +6,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(main src/main.cpp src/loadShader.cpp src/render.cpp src/render.h src/loadShader.h src/test.h emccSourceDir.h)
+add_executable(main src/main.cpp src/loadShader.cpp src/loadShader.h src/sourceDir.h)
 
 if(EMSCRIPTEN)
 
