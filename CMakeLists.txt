@@ -8,6 +8,11 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(main src/main.cpp src/loadShader.cpp src/loadShader.h src/sourceDir.h)
 
+include_directories(
+    external/glm-0.9.7.1/
+
+)
+
 if(EMSCRIPTEN)
 
     set(CMAKE_EXECUTABLE_SUFFIX ".html")
@@ -47,12 +52,11 @@ endif(INCLUDE_DISTRIB)
 
 
 include_directories(
-        external/AntTweakBar-1.16/include/
-        external/glfw-3.1.2/include/
-        external/glm-0.9.7.1/
-        external/glew-1.13.0/include/
-        external/assimp-3.0.1270/include/
-        external/bullet-2.81-rev2613/src/
+    external/glfw-3.1.2/include/
+    external/glew-1.13.0/include/
+    external/AntTweakBar-1.16/include/
+    external/assimp-3.0.1270/include/
+    external/bullet-2.81-rev2613/src/
 )
 
 set(PROJECT_SOURCE_DIR C:/Users/16182/Documents/CPPStuff/ogl-master/ogl-master)
