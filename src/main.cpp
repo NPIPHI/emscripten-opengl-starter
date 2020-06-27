@@ -19,7 +19,7 @@ GLuint vertexbuffer;
 GLuint vertexArrayID;
 GLuint vertexPosition;
 
-void terminate();
+void cleanUp();
 void mainLoop();
 void glInit();
 
@@ -55,7 +55,7 @@ int main( void ){
 		   glfwWindowShouldClose(window) == 0);
 
 	// Close OpenGL window and terminate GLFW
-    terminate();
+    cleanUp();
 #endif
     return 0;
 }
@@ -140,7 +140,7 @@ void mainLoop(){
     glfwPollEvents();
 }
 
-void terminate(){
+void cleanUp(){
     // Cleanup VBO
     glDeleteBuffers(1, &vertexbuffer);
     glDeleteVertexArrays(1, &vertexArrayID);
